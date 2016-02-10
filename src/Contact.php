@@ -41,6 +41,11 @@
         {
             return $this->phone;
         }
+
+        function getWholeContact()
+        {
+            return "<h1>EMPLOYER CONTACT INFO<br>Name: " . $this->name . "<br>Email: " . $this->email . "<br>Phone number: " . $this->phone . "</h1>";
+        }
     }
 
 ?>

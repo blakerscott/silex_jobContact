@@ -33,7 +33,7 @@
 
         function getWholeTitle()
         {
-          return "<h1>We are accepting applications for: " . $this->title . "<br>" . "and the job description is: " . $this->desc . "</h1>";
+          return "<h1>We are accepting applications for: " . $this->title . "<br>and the job description is: " . $this->desc . "</h1>";
 
         }
 

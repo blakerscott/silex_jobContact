@@ -35,11 +35,15 @@
 
     $app->get("/job_postings", function() {
       $output = "";
-      $this_posting = new jobOpening($_GET['title'], $_GET['desc']);
+      $this_posting = new JobOpening($_GET['title'], $_GET['desc']);
+      $contact_info = new Contact($_GET['name'], $_GET['email'], $_GET['phone']);
+      $contactoutput = $contact_info->getWholeContact();
       $postattempt = $this_posting->getWholeTitle();
       $output = $output . "
       <h1>" . $postattempt . "</h1>
-      ";
+      <h2>" . $contactoutput . "</h1>"
+
+      ;
 
       return $output;
   });
